@@ -1,0 +1,129 @@
+body{
+    display: flex;
+    justify-content: space-around;
+    background-color: $bg-principal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.perfil__section{
+    flex: 1;
+    border-right: $border-secundario;
+}
+.perfil__section > header, .info__content{
+    position: sticky;
+    top: 0;
+}
+.perfil__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.perfil__content-title{
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: $bradius-5;
+    box-sizing: border-box;
+    padding: 0 1em;
+    width: 60%;
+}
+.perfil__titulo{
+    font-size: 24px;
+    color: $bg-secundario;
+    text-shadow: 
+    -1px -1px 0 $color-verde-oscuro-f,
+    1px -1px 0 $color-verde-oscuro-f,
+    1px 1px 0 $color-verde-oscuro-f,
+    -1px 1px 0 $color-verde-oscuro-f;
+}
+.perfil__titulo-2{
+    font-size: 24px;
+    position: absolute;
+    color: $color-verde-f;
+    animation: ola 3s ease-in-out infinite;
+}
+
+.perfil__content-nav{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 88vh;
+}
+.perfil__nav{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.perfil__btn-nav{
+    font-size: 20px;
+    padding: 1em 1em;
+    text-decoration: none;
+    color: #000;
+}
+.perfil__btn-nav:last-child{
+    text-align: center;
+    width: 200px;
+    background-color: $bg-tercero;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 1em;
+}
+.perfil__btn-nav:hover{
+    transition: background-color .2s ease-in;
+    background-color: $bg-secundario;
+    border-radius: 30px;
+}
+.perfil__content-perfil{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.perfil__content-perfil > div{
+    display: flex;
+}
+.perfil__nombre{
+    font-weight: 600;
+}
+.perfil__logo{
+    width: 60px;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 100px;
+}
+.icon-settings-profile{
+    padding-right: 3em;
+}
+@keyframes ola {
+    0%,100%{
+        clip-path: polygon(
+            0% 47%,
+            10% 48%,
+            33% 54%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+            );
+    }
+    50%{
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%);
+    }
+}
+
+@media (max-width:1669px) {
+    .perfil__content-title,.perfil__content-nav{
+        width: 80%;
+    }
+}

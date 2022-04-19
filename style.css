@@ -1,0 +1,248 @@
+body {
+  display: flex;
+  justify-content: space-around;
+  background-color: #A8A5FE;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.perfil__section {
+  flex: 1;
+  border-right: 1px solid #918EFF;
+}
+
+.perfil__section > header, .info__content {
+  position: sticky;
+  top: 0;
+}
+
+.perfil__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.perfil__content-title {
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 0 1em;
+  width: 60%;
+}
+
+.perfil__titulo {
+  font-size: 24px;
+  color: #918EFF;
+  text-shadow: -1px -1px 0 #90d627, 1px -1px 0 #90d627, 1px 1px 0 #90d627, -1px 1px 0 #90d627;
+}
+
+.perfil__titulo-2 {
+  font-size: 24px;
+  position: absolute;
+  color: #adff2f;
+  animation: ola 3s ease-in-out infinite;
+}
+
+.perfil__content-nav {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 88vh;
+}
+
+.perfil__nav {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.perfil__btn-nav {
+  font-size: 20px;
+  padding: 1em 1em;
+  text-decoration: none;
+  color: #000;
+}
+
+.perfil__btn-nav:last-child {
+  text-align: center;
+  width: 200px;
+  background-color: #a78eff;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.perfil__btn-nav:hover {
+  transition: background-color 0.2s ease-in;
+  background-color: #918EFF;
+  border-radius: 30px;
+}
+
+.perfil__content-perfil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.perfil__content-perfil > div {
+  display: flex;
+}
+
+.perfil__nombre {
+  font-weight: 600;
+}
+
+.perfil__logo {
+  width: 60px;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.icon-settings-profile {
+  padding-right: 3em;
+}
+
+@keyframes ola {
+  0%, 100% {
+    clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+@media (max-width: 1669px) {
+  .perfil__content-title, .perfil__content-nav {
+    width: 80%;
+  }
+}
+.body__content {
+  flex: 1;
+  padding: 0 1em;
+}
+
+.body__titulo-nav {
+  position: sticky;
+  background-color: rgba(168, 165, 254, 0.9058823529);
+  padding: 20px 10px;
+  top: 0;
+  margin: 0;
+}
+
+.body__content-extra {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 4em 0;
+  box-sizing: border-box;
+}
+
+.body__content-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin: 0 2em;
+}
+
+.body__content-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.body__content-info {
+  width: 600px;
+  height: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: #918EFF;
+  border-radius: 5px;
+}
+
+.body__content-info > p {
+  font-weight: 600;
+}
+
+.body__titulo-nombre {
+  font-size: 12px;
+}
+
+.info__section {
+  flex: 1;
+  border-left: 1px solid #918EFF;
+}
+
+.info__content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+}
+
+.info__content-search {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.info__input-search {
+  width: 310px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #918EFF;
+  border-radius: 5px 0 0 5px;
+  color: #fff;
+}
+
+.icon-search {
+  padding: 12px;
+  background-color: #918EFF;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-left: 1px solid #A8A5FE;
+}
+
+.info__content-informativo {
+  width: 350px;
+  background-color: #918EFF;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.info__content-informativo > h4 {
+  padding: 10px;
+  margin: 0;
+}
+
+.info__content-info {
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.info__content-info:hover {
+  width: 100%;
+  background-color: #A8A5FE;
+  cursor: pointer;
+}
+
+.info__content-asunto > p {
+  margin: 0;
+}
+
+.info__info-asunto {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.info__content-asunto > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
